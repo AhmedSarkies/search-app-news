@@ -39,16 +39,18 @@ const Home = () => {
         <>
           <SearchBar setQuery={setQuery} setPage={setPage} page={page} />
           {news?.length > 0 && (
-            <div className="text-center mt-5 text-xl text-gray-600">
+            <div className="text-center mt-5 text-xl text-gray-600 my-10">
               Showing {news?.length} results
             </div>
           )}
           {error && (
-            <div className="text-center mt-5 text-xl text-red-600">{error}</div>
+            <div className="text-center mt-5 text-xl text-red-600">
+              Error fetching news
+            </div>
           )}
           <NewsList news={news} />
           {news?.length === 0 && (
-            <div className="text-center mt-5 text-xl text-gray-600">
+            <div className="text-center mt-5 text-xl text-gray-600 my-10">
               No news found
             </div>
           )}
