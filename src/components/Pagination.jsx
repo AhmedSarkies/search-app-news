@@ -1,4 +1,3 @@
-// eslint-disable-next-line react/prop-types
 const Pagination = ({ currentPage, setPage }) => {
   const handlePrev = () => {
     if (currentPage > 1) setPage(currentPage - 1);

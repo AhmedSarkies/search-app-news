@@ -14,17 +14,24 @@ const Header = () => {
   return (
     <header className="bg-gray-900 text-white p-4 shadow-xl mb-8">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">
+        <Link
+          to="/"
+          className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-slate-200 via-fuchsia-300 to-indigo-700 inline-block text-transparent bg-clip-text"
+        >
           Search App News
         </Link>
         <nav>
-          <Link to="/" className="mr-4">
+          <Link to="/" className="mr-4 hover:underline">
             Home
           </Link>
           {isAuthenticated ? (
-            <Link onClick={logout}>Logout</Link>
+            <Link onClick={logout}
+            className="hover:underline"
+            >Logout</Link>
           ) : (
-            <Link to="/login">Login</Link>
+            <Link to="/login"
+            className="hover:underline"
+            >Login</Link>
           )}
         </nav>
       </div>

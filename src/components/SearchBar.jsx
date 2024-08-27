@@ -1,4 +1,3 @@
-// eslint-disable-next-line react/prop-types
 const SearchBar = ({ setQuery, setPage, page }) => {
   const handleSearch = (e) => {
     e.preventDefault();
